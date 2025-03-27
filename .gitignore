@@ -1,0 +1,4 @@
+datasets/*
+__pycache__/
+datasets.zip
+.DS_Store
