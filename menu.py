@@ -46,7 +46,9 @@ class Menu:
             print("❌ Error: No se ha cargado un archivo. Primero cargue un archivo.")
             return
 
+        # =========================================
         # Ensuciar el archivo
+        # =========================================
         dirty_df = self.df.copy()
         
         # Poner valores NULL en algunas filas de las columnas: adults, children
@@ -67,7 +69,10 @@ class Menu:
         print("📂 Archivo sucio guardado como dirty.csv")
 
 
+
+        # =========================================
         # Preguntar al usuario el formato de exportación
+        # =========================================
         print("¿En qué formato deseas exportar el archivo?")
         print("1. CSV")
         print("2. XLSX")
@@ -100,8 +105,9 @@ class Menu:
 
 
 
-
+        # =========================================
         # Normalizar el archivo
+        # =========================================
         final_df = dirty_df.copy()
         
         # Reemplazar NULL con el promedio de cada columna en 'adults' y 'children'
@@ -115,7 +121,9 @@ class Menu:
         
 
 
+        # =========================================
         # guardarlo como csv, xlsx, json o meterlo a la base de datos dependiendo de lo que eligieron los putos
+        # =========================================
         final_df.to_csv("final.csv", index=False)
 
         print("✅ Archivo exportado exitosamente.")
